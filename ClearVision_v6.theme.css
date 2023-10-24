@@ -38,7 +38,7 @@
   --members-width: 240px; /* member list width [default: 240px] */
 
   /* APP BACKGROUND */
-  --background-shading: 50%; /* app background shading (0 for complete smoothness) [default: 100%] */
+  --background-shading: 0%; /* app background shading (0 for complete smoothness) [default: 100%] */
   --background-overlay: rgba(0, 0, 0, 0.6); /* app background overlay color/gradient [default: rgba(0, 0, 0, 0.6)] */
   --background-image: url(https://cdn.discordapp.com/attachments/707285651535560788/1166100480116670565/aaaaaaaaaa.gif?ex=654942b3&is=6536cdb3&hm=eff4c92f3b4ef5b412de480cb0de583e68665e4eb47200bf616dd4f4c693d057&); /* app background image (link must be HTTPS) [default: url(https://clearvision.github.io/images/sapphire.jpg)]*/
   --background-position: center; /* app background position [default: center] */
