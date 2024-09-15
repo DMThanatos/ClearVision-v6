@@ -12,6 +12,21 @@
   background: transparent;
   border-color: transparent;
 }
+%accountSettingsBadges {
+  background-color: rgba(0, 0, 0, calc(var(--background-shading) * 0.4));
+}
+// MY ACCOUNT - VERIFY PHONE
+%phoneInput {
+  background-color: hsla(0, 0%, 100%, 0.07);
+  border: none;
+  box-shadow: 0 0 0 2px hsla(0, 0%, 100%, 0.09);
+  &:focus-within {
+    box-shadow: 0 0 2px 2px $main-color;
+  }
+  %phoneInputField {
+    background-color: transparent;
+  }
+}
 
 // USER PROFILE
 %avatarOptionBox {
@@ -25,8 +40,19 @@
   padding: 0;
 }
 %avatarGifIconContainer {
-  background-color: $main-color;
+  background-color: hsla( 0, 0%, 0%, 0.8);
 }
+%avatarGifIcon {
+  background-color: transparent;
+  path {
+    fill: #fff;
+  }
+}
+%avatarEditingContainer {
+  background-color: transparent;
+}
+
+// USER PROFILE - AVATAR DECO
 %avatarDecoItem {
   background-color: hsla(0, 0%, 100%, 0.05);
   &:hover {
@@ -36,28 +62,75 @@
     box-shadow: inset 0 0 0 2px $main-color;
   }
 }
-%avatarDecoItemBadge {
+%avatarDecoItemLock {
   background-color: $main-color !important;
 }
 %avatarDecoPreview,
 %avatarDecoPreviewSmall {
   background-color: hsla(0, 0%, 100%, 0.05);
 }
+%avatarDecoPreviewUpsell {
+  background: transparent;
+  border: 2px solid var(--premium-tier-2-purple-for-gradients-2);
+}
 
+// USER PROFILE - PROFILE EFFECT
+%profileEffectItem {
+  background-color: hsla(0, 0%, 100%, 0.05);
+  &:hover {
+    background-color: hsla(0, 0%, 100%, 0.07);
+  }
+  &%profileEffectItemSelected {
+    box-shadow: inset 0 0 0 2px $main-color;
+  }
+}
+%profileEffectDescription,
+%profileEffectDescriptionUpsell,
+%profileEffectDescriptionContainer {
+  background: transparent;
+}
+%profileEffectDescriptionUpsell {
+  border: 2px solid var(--premium-tier-2-purple-for-gradients-2);
+}
+%profileEffectItemLock {
+  background-color: $main-color !important;
+}
+
+// USER PROFILE - SERVER PROFILES UPSELL
 %userSettingsProfilePremiumBorder {
   background: hsla(0, 0%, 0%, 0.4);
-  border-color: hsl(302, 100%, 72.5%);
+  border: 2px solid var(--premium-tier-2-purple-for-gradients-2);
 }
 %userSettingsProfilePremiumBackground {
   background: transparent;
 }
 %userSettingsProfileUpsellOverlayContainer {
   background: hsla(0, 0%, 0%, 0.4);
-  border-color: hsl(302, 100%, 72.5%);
+  border: 2px solid var(--premium-tier-2-purple-for-gradients-2);
 }
 %themeDark {
   %userSettingsProfileUpsellOverlay {
     background: hsla(0, 0%, 0%, 0.4);
+  }
+}
+
+// PRIVACY AND SAFETY - STANDING
+%themeDark %userSettingsPrivacyStandingContainer%settingsCard {
+	background-color: transparent;
+}
+%userSettingsPrivacyStandingAvatarBG {
+  background-color: transparent;
+}
+%userSettingsPrivacyStandingLine,
+%userSettingsPrivacyStandingMarker {
+	background-color: hsla(0, 0%, 100%, .1);
+}
+%userSettingsPrivacyStandingMarker {
+  %userSettingsPrivacyStandingMarkerEmpty {
+    background-color: hsla(0, 0%, 100%, .1);
+  }
+  svg circle {
+    fill: #fff;
   }
 }
 
@@ -95,6 +168,9 @@
     background-color: hsla(0, 0%, 100%, 0.07);
   }
 }
+%subEnabledServers {
+  background: rgba(0, 0, 0, 0.6)
+}
 
 // BILLING
 %themeDark {
@@ -129,8 +205,15 @@
 }
 
 // NITRO
+%userSettingsNitroPerkCard {
+  background-color: hsla(0, 0%, 0%, .4);
+}
 %userSettingsNitroGiftCard {
   background: rgba(0, 0, 0, 0.4);
+}
+%themeDark %userSettingsNitroShareCard {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: none;
 }
 
 // SUBSCRIPTIONS
@@ -157,17 +240,38 @@
 %copyGiftCode {
   background-color: hsla(0, 0%, 100%, 0.07);
 }
+%themeDark %giftQuestContainer {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+%giftQuestProgress {
+  color: $main-color !important;
+}
 
 // SERVER BOOST
-%userSettingsBoostHeaderBorderRect {
-  stroke: $main-color;
+%userSettingsBoostHeaderWave {
+  fill: rgba(0, 0, 0, 0.6);
 }
-%userSettingsBoostHeader,
+%userSettingsBoostApplied {
+  background-color: transparent;
+}
 %userSettingsBoostGuildContainer,
+%userSettingsBoostContainer,
 %userSettingsBoostGuildSearchWrapper,
 %userSettingsBoostRecognitionCard,
 %userSettingsBoostFAQ {
   background-color: rgba(0, 0, 0, 0.4);
+}
+%userSettingsBoostTransferSearch {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+%userSettingsBoostTransferButton {
+  background-color: $main-color;
+}
+%freeBoost {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.content_c258fa:after, .content_c258fa:before {
+  border-color: transparent;
 }
 
 // APPEARANCE
@@ -205,6 +309,7 @@
     }
   }
 }
+
 %userSettingsEntranceSoundButton {
   background-color: hsla(0, 0%, 100%, 0.1);
 }

@@ -1,4 +1,12 @@
 /*CUSTOMIZE CHANNELS*/
+
+%customizeChannelsHeader {
+  background-color: rgba(0, 0, 0, calc(var(--background-shading) * 0.6)) !important;
+}
+%customizeChannels {
+  background-color: rgba(0, 0, 0, calc(var(--background-shading) * 0.5)) !important;
+}
+
 /*header*/
 %customizeChannelsHeaderBar {
   border-bottom: none;
@@ -32,7 +40,10 @@
 
 /*BROWSE CHANNELS*/
 %browseChannels {
-  background-color: rgba(0, 0, 0, calc(var(--background-shading) * 0.4));
+  background-color: transparent;
+}
+%browseChannelsTip {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 %browseChannelsSelectAll {
@@ -86,7 +97,7 @@
 }
 
 // NOT IN CHANNEL LIST
-%channelHeaderBar {
+%channelNotInList {
   background: transparent;
 }
 /* SERVER GUIDE */
@@ -116,15 +127,15 @@
     background-position: center center;
     background-size: 100%100%;
   }
-  %serverGuideChannelIcon, %serverGuideRulesIcon {
-    background: var(--main-color);
-    &>svg>path {
+  %serverGuideChannelIcon,
+  %serverGuideRulesIcon {
+    background: $main-color;
+    & > svg > path {
       fill: #fff;
     }
   }
   %serverGuideActionCompleted > path {
     fill: var(--success-color);
-  
   }
 }
 /*Cases where we get taken to channels*/
